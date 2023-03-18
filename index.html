@@ -8,33 +8,149 @@
     <title>Winnie | 作品集</title>
     <meta name="description">
     <link rel="stylesheet" type="text/css" href="./css/FiraCode.css">
-    <link rel="stylesheet" type="text/css" href="./css/nutssss.css">
+    <link rel="stylesheet" type="text/css" href="./css/nutssss.css" />
+    <link rel="stylesheet" type="text/css" href="./css/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="./css/examples.css" />
     <link rel="icon" href="./favicon.ico">
+
+    <style>
+        .actions {
+            position: absolute;
+            z-index: 999;
+            top: 70px;
+            left: 50px;
+        }
+
+        .actions li {
+            display: inline-block;
+        }
+
+        .actions button {
+            padding: 0.93em 1.87em;
+            background: #35495e;
+            border-radius: 5px;
+            border: 0;
+            color: #fff;
+            margin: 7px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .actions button:hover {
+            background: #fff;
+            color: #35495e;
+        }
+
+        #section0 {
+            background-image: linear-gradient(to left, rgba(255, 0, 149, 0.2), rgba(0, 247, 255, 0.2)), url(https://s1.ax1x.com/2022/07/30/viVWRO.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .meBox-text {
+            width: 80%;
+            height: 45%;
+            overflow: hidden;
+            text-align: center;
+            color: rgb(70, 70, 70);
+            animation-name: meBox-text;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            margin: 5% 0 0 10%;
+            transition: all 0.3s;
+        }
+
+        .meBox-text p {
+            margin-top: 5px;
+        }
+
+        .meBox:hover .meBox-text {
+            font-size: 1.05rem;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/fullpage.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#ff5f45', '#0798ec', '#fc6c7c', '#fec401'],
+                navigation: true,
+                slidesNavigation: true,
+            });
+
+            $('#moveSectionUp').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.moveSectionUp();
+            });
+
+            $('#moveSectionDown').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.moveSectionDown();
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <div id="box">
-        <!-- 个人资料卡片 -->
-        <div class="meBox">
-            <!-- 头像 -->
-            <div class="headPhoto"></div>
-            <!-- 介绍 -->
-            <div class="meBox-title">
-                <p>I'm Winnie</p>
-                <div class="fg"></div>
+
+    <ul id="menu">
+        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First slide</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+    </ul>
+
+    <ul class="actions">
+        <li><button id="moveSectionUp">Move Section Up</button></li>
+        <li><button id="moveSectionDown">Move Section Down</button></li>
+    </ul>
+
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <div id="box">
+                <!-- 个人资料卡片 -->
+                <div class="meBox">
+                    <!-- 头像 -->
+                    <div class="headPhoto"></div>
+                    <!-- 介绍 -->
+                    <div class="meBox-title">
+                        <p>I'm Winnie</p>
+                        <div class="fg"></div>
+                    </div>
+                    <div class="meBox-text">
+                        <p>欢迎来到我的主页<img src="https://s1.ax1x.com/2022/07/30/vilIOK.png" alt="咸鱼"
+                                style="width: 20px; vertical-align: middle;"></p>
+                        <p>这里有我的作品集</p>
+                        <p>目前正在努力创作</p>
+                        <p>我希望能够分享一些实用有趣的互联网知识给你</p>
+                        <p>也欢迎你来访我的主页哦 ٩(๑>◡<๑)۶ </p>
+                    </div>
+                    <!-- 两个按钮 -->
+                    <div class="meBox-Button">
+                        <a href="#">联系我</a>
+                        <a href="#">作品集</a>
+                    </div>
+                </div>
             </div>
-            <div class="meBox-text">
-                <p>欢迎来到我的主页<img src="https://s1.ax1x.com/2022/07/30/vilIOK.png" alt="咸鱼" style="width: 20px; vertical-align: middle;"></p>
-                <p>这里有我的作品集</p>
-                <p>目前正在努力创作</p>
-                <p>我希望能够分享一些实用有趣的互联网知识给你</p>
-                <p>也欢迎你来访我的主页哦 ٩(๑>◡<๑)۶ </p>
+        </div>
+        <div class="section">
+            <div class="slide">
+                <h1>section2.1</h1>
             </div>
-            <!-- 两个按钮 -->
-            <div class="meBox-Button">
-                <a href="#">联系我</a>
-                <a href="#">作品集</a>
+            <div class="slide">
+                <h1>Section 2.2</h1>
             </div>
+            <div class="slide">
+                <h1>Section 2.3</h1>
+            </div>
+        </div>
+        <div class="section">
+            <h1>Section 3</h1>
+        </div>
+        <div class="section">
+            <h1>Section 4</h1>
         </div>
     </div>
 

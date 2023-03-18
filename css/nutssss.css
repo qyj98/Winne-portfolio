@@ -9,10 +9,10 @@ html, body {
 }
 
 body {
-    background-image: linear-gradient(to left, rgba(255, 0, 149, 0.2), rgba(0, 247, 255, 0.2)), url(https://s1.ax1x.com/2022/07/30/viVWRO.jpg);
-    background-repeat: no-repeat;
+    /* background-image: linear-gradient(to left, rgba(255, 0, 149, 0.2), rgba(0, 247, 255, 0.2)), url(https://s1.ax1x.com/2022/07/30/viVWRO.jpg); */
+    /* background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; */
 }
 
 #box {
@@ -104,26 +104,7 @@ body {
     margin: 5% 0 0 10%;
 }
 
-.meBox-text {
-    width: 80%;
-    height: 45%;
-    overflow: hidden;
-    text-align: center;
-    color: rgb(70, 70, 70);
-    animation-name: meBox-text;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    margin: 5% 0 0 10%;
-    transition: all 0.3s;
-}
 
-.meBox-text p {
-    margin-top: 5px;
-}
-
-.meBox:hover .meBox-text {
-    font-size: 1.05rem;
-}
 
 @keyframes meBox-text {
     0% {
