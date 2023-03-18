@@ -44,7 +44,7 @@ body {
 .headPhoto {
     width: 8rem;
     height: 8rem;
-    background: url(https://s1.ax1x.com/2022/03/23/q15RgA.jpg) no-repeat;
+    background: url('../static/selfcartoon.png') no-repeat;
     background-size: cover;
     border-radius: 50%;
     position: relative;
